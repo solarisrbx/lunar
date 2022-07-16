@@ -9,8 +9,7 @@
 ]]--
 
 local SUPPORTED_PLACES = {
-    2788229376,
-    10222965130
+    2788229376
 }
 
 local placeId: number = game.PlaceId
