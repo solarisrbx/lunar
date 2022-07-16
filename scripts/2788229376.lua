@@ -10,4 +10,4 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solar
 local hood = {}
 hood.gui = library.new("Lunar")
 
-hood:Notify("Detected we are in Da Hood")
+hood:Notify("Injected", "Detected we are in Da Hood")

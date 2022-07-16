@@ -7,4 +7,4 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solar
 local hood = {}
 hood.gui = library.new("Lunar")
 
-hood:Notify("Uh-oh! This game isn't supported by Lunar. Destroying!")
+hood:Notify("Uh-oh!", "This game isn't supported by Lunar. Destroying!")
