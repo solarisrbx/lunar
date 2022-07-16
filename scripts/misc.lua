@@ -1,0 +1,1 @@
+print("Not in a game supported by Lunar")
