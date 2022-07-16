@@ -289,7 +289,19 @@ end
 
 -- // Check if silent aim can used
 function Aiming.Check()
-    return (Aiming.Enabled == true and Aiming.Selected ~= LocalPlayer and Aiming.SelectedPart ~= nil)
+    if not (Aiming.Enabled == true and Aiming.Selected ~= Players.LocalPlayer and Aiming.SelectedPart ~= nil) then
+        return false
+    end
+ 
+    local Character = Aiming.Character(Aiming.Selected)
+    local KOd = Character:WaitForChild("BodyEffects")["K.O"].Value
+    local Grabbed = Character:FindFirstChild("GRABBING_CONSTRAINT") ~= nil
+ 
+    if (KOd or Grabbed) then
+        return false
+    end
+ 
+    return true
 end
 Aiming.checkSilentAim = Aiming.Check
 
@@ -353,6 +365,9 @@ function Aiming.GetClosestTargetPartToCursor(Character)
     -- //
     return ClosestPart, ClosestPartPosition, ClosestPartOnScreen, ClosestPartMagnitudeFromMouse
 end
+
+
+
 
 -- // Silent Aim Function
 function Aiming.GetClosestPlayerToCursor()
