@@ -10,7 +10,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solar
 local aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/solarisrbx/lunar/dev/util/aiming.lua"))()
 aiming.TeamCheck(false)
 aiming.VisibleCheck = false
-aiming.FOV = 60
+aiming.FOV = 35
 
 local hood = {}
 hood.gui = library.new("Lunar")
