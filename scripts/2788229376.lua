@@ -11,6 +11,7 @@ local aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/solari
 aiming.TeamCheck(false)
 aiming.VisibleCheck = false
 aiming.FOV = 35
+aiming.ShowFOV = false
 
 local hood = {}
 hood.gui = library.new("Lunar")
@@ -25,6 +26,9 @@ silentAim:addToggle("Enabled", false, function(val: boolean)
 end)
 silentAim:addToggle("Show FOV", false, function(val: boolean)
     aiming.ShowFOV = val
+end)
+silentAim:addSlider("FOV Size", 35, 0, 180, function(val: number)
+    aiming.FOV = val
 end)
 
 
