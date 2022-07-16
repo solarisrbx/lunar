@@ -5,4 +5,9 @@
     0.0.1
 ]]--
 
-print("Detected I am in Da Hood")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solarisrbx/lunar/dev/util/lib.lua"))()
+
+local hood = {}
+hood.gui = library.new("Lunar")
+
+hood:Notify("Detected we are in Da Hood")
