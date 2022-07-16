@@ -37,7 +37,7 @@ end)
 silentAim:addToggle("Show FOV Circle", true, function(val: boolean)
     aiming.ShowFOV = val
 end)
-silentAim:addSlider("FOV Size", 0, 400, function(val: boolean)
+silentAim:addSlider("FOV Size", 0, 0, 400, function(val: boolean)
     aiming.FOV = val
 end)
 
